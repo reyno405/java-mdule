@@ -58,5 +58,30 @@ function generatePassword() {
     userChoices = userChoices + characters
       console.log(userChoices)
   }
-
+  var passwordTest = []
+  var passwordBlank = [];
+  //Loop for random selection
+   for (var i = 0; i < enter; i++) {
+    passwordTest += userChoices[Math.floor(Math.random() * userChoices.length)];
+    
+  }
+  passwordBlank.push(passwordTest);
+    // console.log(userChoices);
+    
+  // Join and return the password 
+  var password = passwordBlank.join("");
+    console.log("Your Pasword is: " + password);
+  return password;
+  }
+  
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+  
+  }
+  
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
 

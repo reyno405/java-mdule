@@ -42,6 +42,21 @@ function generatePassword() {
     var confirmLower = confirm("Include any Lowercase letters?(eg. a, b, c, d)");
       console.log("Lower case " , confirmLower);
   };
-
+  if (confirmNumbers) {
+    userChoices = userChoices + numbers
+      console.log(userChoices)
+  }
+  if (confirmLower) {
+    userChoices = userChoices + alphaLower
+      console.log(userChoices)
+  }
+  if (confirmUpper) {
+    userChoices = userChoices + alphaUpper
+      console.log(userChoices)
+  }
+  if (confirmCharacters) {
+    userChoices = userChoices + characters
+      console.log(userChoices)
+  }
 
 

@@ -39,6 +39,12 @@ WHEN the password is generated
 
 THEN the password is either displayed in an alert or written to the page
 
+
+# Screenshot
+
+[![C-Users-t6500-Documents-random-password-index-html.png](https://i.postimg.cc/28NBZ3nf/C-Users-t6500-Documents-random-password-index-html.png)](https://postimg.cc/23T6pkHH)
+
+
 # Deployed link
 
 https://reyno405.github.io/password-generator/

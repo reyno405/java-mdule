@@ -22,43 +22,54 @@ var alphaLower = alphaUpper.toString().toLocaleLowerCase();
 //ask for input for the password lenth and convert it to an integer
 function generatePassword() {
   // Ask four user Input
- var enter = prompt("How many characters would you like your password? Choose between 8 and 128");
+ var enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
     console.log("Password length " , enter);
 //alert for input
-  if(!enter) {
+  if (!(7 < enter && enter < 129)) {
     alert("Does Not Meet Password Requirements");
 
-    } if (enter < 8 && enter > 128) {
-      enter = parseInt(prompt("password must be 8 to 128 characters"));
-      console.log("Password lenth" , enter);
-  
-    } else {
+    } 
+  // if (!(7 < enter && enter < 129)) {
+  //   enter = parseInt(prompt("password must be 8 to 128 characters"));
+  //   console.log("Password lenth" , enter);
+   
+  // } 
+  else {
     var confirmCharacters = confirm("include Characters characters? (eg. %, $, !, #)");
-      console.log("Characters" , confirmCharacters)
+      console.log("Characters" , confirmCharacters);
     var confirmNumbers = confirm("Include any number? (eg. 1, 2, 3, 4)");
-      console.log("Numbers" , confirmNumbers)
+      console.log("Numbers" , confirmNumbers);
     var confirmUpper = confirm("Include any Uppercase letter? (eg. A, B, C, D)");
       console.log("Upper case " , confirmUpper);
     var confirmLower = confirm("Include any Lowercase letters?(eg. a, b, c, d)");
       console.log("Lower case " , confirmLower);
-  };
-  if (confirmNumbers) {
-    userChoices = userChoices + numbers
-      console.log(userChoices)
   }
-  if (confirmLower) {
-    userChoices = userChoices + alphaLower
-      console.log(userChoices)
+  
+  if (confirmNumbers || confirmLower || confirmUpper || confirmCharacters) {
+    if (confirmNumbers) {
+      userChoices = userChoices + numbers;
+        console.log(userChoices);
+    }
+    if (confirmLower) {
+      userChoices = userChoices + alphaLower;
+        console.log(userChoices);
+    }
+    if (confirmUpper) {
+      userChoices = userChoices + alphaUpper;
+        console.log(userChoices);
+    }
+    if (confirmCharacters) {
+      userChoices = userChoices + characters;
+        console.log(userChoices);
+    }
+}
+  else {
+    alert("Your Password Doesnt Have All Requirments.")
+    userChoices = [""]
   }
-  if (confirmUpper) {
-    userChoices = userChoices + alphaUpper
-      console.log(userChoices)
-  }
-  if (confirmCharacters) {
-    userChoices = userChoices + characters
-      console.log(userChoices)
-  }
-  var passwordTest = []
+
+
+  var passwordTest = [];
   var passwordBlank = [];
   //Loop for random selection
    for (var i = 0; i < enter; i++) {

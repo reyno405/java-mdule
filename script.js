@@ -28,12 +28,8 @@ function generatePassword() {
   if (!(7 < enter && enter < 129)) {
     alert("Does Not Meet Password Requirements");
 
-    } 
-  // if (!(7 < enter && enter < 129)) {
-  //   enter = parseInt(prompt("password must be 8 to 128 characters"));
-  //   console.log("Password lenth" , enter);
-   
-  // } 
+  } 
+  
   else {
     var confirmCharacters = confirm("include Characters characters? (eg. %, $, !, #)");
       console.log("Characters" , confirmCharacters);
@@ -62,7 +58,7 @@ function generatePassword() {
       userChoices = userChoices + characters;
         console.log(userChoices);
     }
-}
+  }
   else {
     alert("Your Password Doesnt Have All Requirments.")
     userChoices = [""]
